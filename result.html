@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    
+    <!-- Link the same CSS file if lun.html uses external css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <!-- OR if lun.html has internal <style> copy-paste that here too -->
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Prediction Result</h1>
+
+        <div class="result">
+            {{ prediction }}
+        </div>
+
+        <a href="/" class="btn">Predict Again</a>
+    </div>
+
+</body>
+</html>

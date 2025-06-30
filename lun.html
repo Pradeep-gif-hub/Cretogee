@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRETOGEE | Space Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      background: url('background1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #eee;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: url('header.jpdsfsfdsfgsgydshdfshdsgjhfsujrst') no-repeat center center;
+      background-size: cover;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+      position: relative;
+      z-index: 1;
+      /* border-bottom: 2px solid #4fc3f7;  -- REMOVED */
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 50px;
+      color: #4fc3f7;
+      letter-spacing: 2px;
+    }
+
+    .logo {
+      height: 250px;
+    }
+
+    nav a {
+        font-size: 20px;
+        padding: 10px 20px;
+        color: white;
+        background-color: #007BFF;
+        border: none;
+        border-radius: 30px;
+        text-decoration:solid;
+        transition: all 0.3s ease;
+      }
+    
+      nav:hover a {
+        opacity: 0.2; /* Fade out all buttons on hover over nav */
+      }
+    
+      nav a:hover {
+        opacity: 1; /* Full visible only on the hovered button */
+      }
+    .hero, .section {
+      padding: 60px 50px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      background: rgba(11, 11, 59, 0.9);
+      margin: 50px;
+      border-radius: 15px;
+    }
+
+    .hero h2, .section h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #4fc3f7;
+      margin-bottom: 30px;
+    }
+
+    .hero p, .section p {
+      font-size: 18px;
+      font-weight: 400;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .projects, .team, .gallery, .references {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #101047;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(79,195,247,0.5);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h4 {
+      font-family: 'Orbitron', sans-serif;
+      color: #4fc3f7;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      background: #0b0b3b;
+      color: #999;
+      margin-top: 50px;
+      border-radius: 0 0 15px 15px;
+    }
+
+    a {
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="cretogeelogo.png" alt="Logo" class="logo">
+  <h1> </h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#team">Team</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#references">References</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Exploring Space. Shaping Tomorrow.</h2>
+  <p>At CRETOGEE, we are blending Machine Learning and Space Science to predict and visualize lunar and planetary craters, using ISRO's IIRS and NASA's datasets.</p>
+</section>
+
+<section id="projects" class="section">
+  <h3>Our Projects</h3>
+  <div class="projects">  
+    <section id="predict" class="section">
+      <h3>Predict Crater Output</h3>
+      <form action="/predict" method="post">
+        <input type="text" name="feature1" placeholder="Enter first Value" required>
+        <input type="text" name="feature2" placeholder="Enter Second Value" required>
+        <input type="text" name="feature3" placeholder="Enter Feature Value" required>
+        <button type="submit">Predict</button>
+      </form>
+    </section>
+    
+    <div class="card">
+      <h4>ML Model for Crater Prediction</h4>
+      <p>Building deep learning models trained on ISRO's IIRS and NASA datasets to predict crater structures with high accuracy.</p>
+    </div>
+    <div class="card">
+      <h4>AI-based Crater Image Generation</h4>
+      <p>Generating realistic crater visuals using advanced image synthesis and generative AI techniques for research and simulation purposes.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h3>About Us</h3>
+  <p>CRETOGEE is a community of passionate explorers and innovators, working on cutting-edge crater prediction models and AI-driven crater image generation. Our mission: to empower space research through the synergy of machine learning and astronomical data.</p>
+</section>
+
+<section id="team" class="section">
+  <h3>Our Team</h3>
+  <div class="team">
+    <div class="card">
+      <img src="pradeepaw.jpeg" alt="Pradeep Awasthi">
+      <h4>Pradeep Awasthi</h4>
+      <h4>ML/Web Developer</h4>
+    </div>
+    <div class="card">
+      <img src="aman2.jpeg" alt="Aman Gautam">
+      <h4>Aman Gautam</h4>
+      <h4>Design Lead</h4>
+    </div>
+    <div class="card">
+      <img src="ayush1.jpeg" alt="Ayush">
+      <h4>Ayush</h4>
+      <h4>Research Analyst</h4>
+    </div>
+    <div class="card">
+      <img src="naveen1.jpeg" alt="Naveen Yadav">
+      <h4>Naveen Yadav</h4>
+      <h4>Research Analyst</h4>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <h3>Gallery</h3>
+  <div class="gallery">
+    <div class="card">
+      <img src="crater1.jpeg" alt="Workshop Moments">
+      <h4>Workshop Moments</h4>
+    </div>
+    <div class="card">
+      <img src="crater2.jpeg" alt="Team Meetups">
+      <h4>Team Meetups</h4>
+    </div>
+    <div class="card">
+      <img src="crater3.jpeg" alt="Space Conference">
+      <h4>Space Conference</h4>
+    </div>
+  </div>
+</section>
+
+<section id="references" class="section">
+  <h3>References</h3>
+  <div class="references">
+    <div class="card">
+      <h4>NASA Datasets</h4>
+      <p>Used for training crater prediction and visualization models. <a href="https://nasa.gov" target="blank"> NASA</a></p>
+    </div>
+    <div class="card">
+      <h4>ISRO IIRS Datasets</h4>
+      <p>Reliable datasets from the Indian Institute of Remote Sensing. <a href=https://isro.hack2skill.com/2024/#challenges target="blank">Hack2Skill</a></p>
+    </div>
+    <div class="card">
+      <h4>ML Data Train Resource</h4>
+      <p>Open-source planetary datasets used to verify model results. <a href="https://astrogeology.usgs.gov/search/map/moon_crater_database_v1_robbins" target="blank">USGS</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h3>Contact Us</h3>
+  <p>For collaborations or inquiries, feel free to reach out at <a href="mailto:cretogee@gmail.com">CLICK HERE TO CONTACT</a>.</p>
+</section>
+
+<footer class="footer">
+  <p>© 2025 CRETOGEE | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
