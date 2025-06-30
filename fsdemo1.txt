@@ -1,0 +1,122 @@
+<!-- Flying Sapphire - HTML Version inspired by Sarala Aviation & Joby Aviation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flying Sapphire | Urban Air Mobility</title>
+  <meta name="description" content="Flying Sapphire is India's first futuristic air taxi company offering eVTOL solutions for urban mobility.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0e0e0e;
+      color: #f4f4f4;
+    }
+    .hero {
+      position: relative;
+      height: 100vh;
+    }
+    #hero-video {
+      width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;
+    }
+    .overlay-text {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;
+    }
+    .cta-button {
+      background: #00bcd4; color: white; padding: 1em 2em; text-decoration: none; border-radius: 8px;
+    }
+    section { padding: 4em 2em; }
+    section.dark { background: #1c1c1c; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h2 { color: #00bcd4; margin-bottom: 0.5em; }
+    form input, form textarea { width: 100%; margin-bottom: 1em; padding: 1em; background: #2c2c2c; border: none; border-radius: 5px; color: white; }
+    button { padding: 1em 2em; background: #00bcd4; border: none; color: white; border-radius: 5px; cursor: pointer; }
+    canvas { background: #111; margin-top: 2em; width: 100%; }
+    footer { padding: 2em; text-align: center; background: #111; font-size: 0.9em; color: #ccc; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <video autoplay muted loop id="hero-video">
+      <source src="media/flying-taxi.mp4" type="video/mp4">
+    </video>
+    <div class="overlay-text">
+      <h1>Skip Traffic. <br>Fly Sapphire.</h1>
+      <a href="#about" class="cta-button">Learn More</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Flying Sapphire</h2>
+      <p><strong>Founder & CEO:</strong> Nitish Khanna</p>
+      <p>We envision transforming urban transportation using eVTOLs. Our goal is to launch India's first air taxi service, solving urban congestion starting from Bangalore.</p>
+    </div>
+  </section>
+
+  <section id="services" class="dark">
+    <div class="container">
+      <h2>Our Services</h2>
+      <ul>
+        <li><strong>Route:</strong> Kempegowda Intl. Airport → Electronic City</li>
+        <li><strong>Flight Time:</strong> 10 min vs 2 hrs by road</li>
+        <li><strong>Technology:</strong> eVTOL - Eco-friendly, quiet, efficient</li>
+        <li><strong>Launch Year:</strong> 2026</li>
+      </ul>
+      <canvas id="routeAnimation" width="1000" height="300"></canvas>
+    </div>
+  </section>
+
+  <section id="future">
+    <div class="container">
+      <h2>Future Plans</h2>
+      <p>We plan to expand to Mumbai, Delhi, and Hyderabad by 2027. Phase 2 includes integration with metro and bullet train terminals to create smart flying cities by 2030.</p>
+    </div>
+  </section>
+
+  <section id="business" class="dark">
+    <div class="container">
+      <h2>Business Potential</h2>
+      <p>The Urban Air Mobility market is forecasted to reach $15B in India by 2030. Flying Sapphire aims to dominate the skyways with affordable and scalable flying solutions.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Flying Sapphire Pvt Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const canvas = document.getElementById("routeAnimation");
+    const ctx = canvas.getContext("2d");
+    let x = 0;
+    let y = 150;
+    function drawPlane() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.beginPath();
+      ctx.arc(x, y, 10, 0, Math.PI * 2);
+      ctx.fillStyle = "#00bcd4";
+      ctx.fill();
+      x += 2;
+      if (x > canvas.width) x = 0;
+      requestAnimationFrame(drawPlane);
+    }
+    drawPlane();
+  </script>
+</body>
+</html>
