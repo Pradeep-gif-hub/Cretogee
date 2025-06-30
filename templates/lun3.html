@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRETOGEE | Space Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='lun.css') }}">
+
+</head>
+<body>
+
+    <header>
+        <img src="{{ url_for('static', filename='images/cretogeelogo.png') }} " alt="Logo" class="logo">
+        <h1> </h1>
+        <nav>
+          <a href="#about">About</a>     
+            <a href="/project">Projects</a>
+          <a href="#team">Team</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+  <section class="hero">
+    <h2>Exploring Space. Shaping Tomorrow.</h2>
+    <p>At CRETOGEE, we are blending Machine Learning and Space Science to predict and visualize lunar and planetary craters, using ISRO's IIRS and NASA's datasets.</p>
+  </section>
+
+  <section id="projects" class="section">
+    <h3>Our Projects</h3>
+    <div class="projects">
+      <div class="card">
+        <h4>ML Model for Crater Prediction</h4>
+        <p>Building deep learning models trained on ISRO's IIRS and NASA datasets to predict crater structures with high accuracy.</p>
+      </div>
+      <div class="card">
+        <h4>AI-based Crater Image Generation</h4>
+        <p>Generating realistic crater visuals using advanced image synthesis and generative AI techniques for research and simulation purposes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h3>About Us</h3>
+    <p>CRETOGEE is a community of passionate explorers and innovators, working on cutting-edge crater prediction models and AI-driven crater image generation. Our mission: to empower space research through the synergy of machine learning and astronomical data.</p>
+  </section>
+
+  <section id="team" class="section">
+    <h3>Our Team</h3>
+    <div class="team">
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/pradeepaw.jpeg') }}" alt="Pradeep Awasthi">
+        <h4>Pradeep Awasthi</h4>
+        <h4>ML/Web Developer</h4>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/aman2.jpeg') }}" alt="Aman Gautam">
+        <h4>Aman Gautam</h4>
+        <h4>UI/UX</h4>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/ayush1.jpeg') }}" alt="Ayush">
+        <h4>Ayush</h4>
+        <h4>Research Analyst</h4>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/naveen1.jpeg') }}" alt="Naveen">
+        <h4>Naveen Yadav</h4>
+        <h4>Research Analyst</h4>
+        <h4></h4>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="gallery" class="section">
+    <h3>Gallery</h3>
+    <div class="gallery">
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/crater/crater1.jpeg') }}" alt="Event 1">
+        <h4>Workshop Moments</h4>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/crater/crater2.jpeg') }}" alt="Event 2">
+        <h4>Team Meetups</h4>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/crater/crater3.jpeg') }}" alt="Event 3">
+        <h4>Space Conference</h4>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="about" class="section">
+    <h3>Refrences </h3>
+    <p>The research Dataset is taken from the below three official Sites and Cretogee Technology is fully reliable on the mentioned sites so Cretogee is not responsible for any Discrepency</p>
+    <p>Learn more about CRETOGEE on our <a href="https://isro.hack2skill.com/2024/#challenges" class="custom-link" target="_blank">official page</a>.</p>
+  </section>
+
+  <section class="section">
+    <h3>Join Us</h3>
+    <p>Are you passionate about space, AI, and innovation? Become a part of CRETOGEE and help shape the future of space exploration!</p>
+    <p><a href="mailto:pawasthi063@gmail.com">Pradeep   |</a><a href="mailto:amangautam2706@gmail.com"> Aman  |</a><a href="mailto:ayushgupta2005@gmail.com">  Ayush</a></p>
+  </section>
+
+
+
+  <footer class="footer">
+    &copy; 2025 CRETOGEE | All Rights Reserved
+  </footer>
+
+</body>
+</html>

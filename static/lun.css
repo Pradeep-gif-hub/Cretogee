@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  background: url('background1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #eee;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: url('header.jpdsfsfdsfgsgydshdfshdsgjhfsujrst') no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  position: relative;
+  z-index: 1;
+  /* border-bottom: 2px solid #4fc3f7;  -- REMOVED */
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 50px;
+  color: #4fc3f7;
+  letter-spacing: 2px;
+}
+
+.logo {
+  height: 250px;
+}
+
+nav a {
+    font-size: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 30px;
+    text-decoration:none;
+    transition: all 0.3s ease;
+  }
+
+  nav:hover a {
+    opacity: 0.2; /* Fade out all buttons on hover over nav */
+  }
+
+  nav a:hover {
+    opacity: 1; /* Full visible only on the hovered button */
+  }
+.hero, .section {
+  padding: 60px 50px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: rgba(11, 11, 59, 0.9);
+  margin: 50px;
+  border-radius: 15px;
+}
+
+.hero h2, .section h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #4fc3f7;
+  margin-bottom: 30px;
+}
+
+.hero p, .section p {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.projects, .team, .gallery, .references {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #101047;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(79,195,247,0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h4 {
+  font-family: 'Orbitron', sans-serif;
+  color: #4fc3f7;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  background: #0b0b3b;
+  color: #999;
+  margin-top: 50px;
+  border-radius: 0 0 15px 15px;
+}
+
+a {
+  color: #4fc3f7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
